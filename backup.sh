@@ -9,6 +9,11 @@
 ## Script para hacer backup de mysql    ##
 ##########################################
 
+LANG=C
+
+# Para debug 
+#set -x
+
 USERDIR="/home/s2wbackup"
 BASE_DIR=$USERDIR"/s2wbackup/backup"
 TMP_DIR=$BASE_DIR"/tmp"
@@ -34,21 +39,6 @@ then
    mkdir $TMP_DIR
    echo "se creo directorio "$TMP_DIR
 fi
-
-# # si  existe  data2 lo borro
-
-# if [ -d "$BACKUP_DIR2" ]
-# then
-#    rm -rf $BACKUP_DIR2
-#    echo "se borro el directorio "$BACKUP_DIR2
-# fi
-
-# # si existe data1
-# if [ -d "$BACKUP_DIR1" ]
-# then
-#    mv  $BACKUP_DIR1 $BACKUP_DIR2
-#    echo "se movio el directorio a "$BACKUP_DIR2
-# fi
 
 # si existe data lo borro
 if [ -d "$BACKUP_DIR" ]
